@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 import javax.annotation.PostConstruct;
 
 @Component
-public class Dog {
+public class Dog extends Pet {
     private String name;
 
     @PostConstruct

@@ -1,6 +1,6 @@
 package main;
 
-public class Parrot {
+public class Parrot extends Pet {
     private String name;
 
     public void setName(String name) {
