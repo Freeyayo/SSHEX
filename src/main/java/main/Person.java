@@ -12,11 +12,11 @@ public class Person {
         this.name = name;
     }
 
-    public main.Pet getPet() {
+    public Pet getPet() {
         return Pet;
     }
 
-    public void setPet(main.Pet pet) {
+    public void setPet(Pet pet) {
         Pet = pet;
     }
 }

@@ -1,5 +1,6 @@
 package main;
 
+import config.ChengduProjectConfig;
 import config.ProjectConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -10,14 +11,14 @@ public class Main {
         var context = new AnnotationConfigApplicationContext(ProjectConfig.class);
 
         Parrot p = context.getBean(Parrot.class);
-        System.out.println(p.getName());
+//        System.out.println(p.getName());
         String s = context.getBean(String.class);
-        System.out.println(s);
+//        System.out.println(s);
         Integer n = context.getBean(Integer.class);
-        System.out.println(n);
+//        System.out.println(n);
 
         Dog d = context.getBean(Dog.class);
-        System.out.println(d.getName());
+//        System.out.println(d.getName());
 
         Double random = Math.random();
         Cat hm = new Cat();
@@ -32,6 +33,13 @@ public class Main {
             context.registerBean("mh", Cat.class, mhSupplier);
         }
         Cat cat = context.getBean(Cat.class);
-        System.out.println(cat.getName());
+//        System.out.println(cat.getName());
+
+
+        var chengduContext = new AnnotationConfigApplicationContext(ChengduProjectConfig.class);
+        Person projectConfigManager = context.getBean("projectConfigManager",Person.class);
+        Person projectConfigManagerAssistant = chengduContext.getBean("chengduProjectConfigManager",Person.class);
+        System.out.println(projectConfigManager.getName());
+        System.out.println(projectConfigManagerAssistant.getName());
     }
 }
