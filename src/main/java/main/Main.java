@@ -38,9 +38,12 @@ public class Main {
 
         var chengduContext = new AnnotationConfigApplicationContext(ChengduProjectConfig.class);
         Person projectConfigManager = context.getBean("projectConfigManager",Person.class);
+        Person projectConfigManagerAssistant = context.getBean("projectConfigManagerAssistant",Person.class);
         Person chengduProjectConfigManager = chengduContext.getBean("chengduProjectConfigManager",Person.class);
         System.out.println(projectConfigManager.getName());
         System.out.println(projectConfigManager.getPet().getName());
+        System.out.println(projectConfigManagerAssistant.getName());
+        System.out.println(projectConfigManagerAssistant.getPet().getName());
         System.out.println(chengduProjectConfigManager.getName());
         System.out.println(chengduProjectConfigManager.getPet().getName());
     }

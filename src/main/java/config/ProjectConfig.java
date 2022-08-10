@@ -2,7 +2,6 @@ package config;
 
 import main.Parrot;
 import main.Person;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -24,10 +23,10 @@ public class ProjectConfig {
         return pcm;
     }
     @Bean
-    Person projectConfigManagerAssistant () {
+    Person projectConfigManagerAssistant (Parrot parrot) {
         Person pcma = new Person();
         pcma.setName("project configuration manager assistant");
-        pcma.setPet(parrot());
+        pcma.setPet(parrot);
         return pcma;
     }
     @Bean
