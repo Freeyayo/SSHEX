@@ -6,6 +6,12 @@ import org.springframework.stereotype.Component;
 @Component
 public class DogOwner extends Person {
     private String name = "Kevin";
+    private final Pet parrot;
+
+    @Autowired
+    public DogOwner(Parrot parrot){
+        this.parrot = parrot;
+    }
 
     @Autowired
     private Dog dog;
@@ -24,5 +30,9 @@ public class DogOwner extends Person {
 
     public void setDog(Dog dog) {
         this.dog = dog;
+    }
+
+    public main.Pet getParrot() {
+        return parrot;
     }
 }

@@ -50,7 +50,7 @@ public class Main {
         DogOwner Kevin = context.getBean(DogOwner.class);
         System.out.println(Kevin.getName());
         System.out.println(Kevin.getDog().getName());
-
+        System.out.println(Kevin.getParrot().getName());
 
     }
 }
