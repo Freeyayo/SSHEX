@@ -22,12 +22,11 @@ public class ProjectConfig {
         pcm.setPet(parrot());
         return pcm;
     }
-
     @Bean
-    Person projectConfigManagerAssistant () {
+    Person projectConfigManagerAssistant (Parrot parrot) {
         Person pcma = new Person();
         pcma.setName("project configuration manager assistant");
-        pcma.setPet(parrot());
+        pcma.setPet(parrot);
         return pcma;
     }
     @Bean

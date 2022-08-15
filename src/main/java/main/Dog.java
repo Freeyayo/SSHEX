@@ -10,7 +10,7 @@ public class Dog extends Pet {
 
     @PostConstruct
     public void init () {
-        this.name = "Kiki";
+        this.name = "Dian Dian";
     }
 
     public void setName(String name) {
