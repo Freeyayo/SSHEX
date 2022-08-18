@@ -48,9 +48,12 @@ public class Main {
 //        System.out.println(chengduProjectConfigManager.getPet().getName());
 
         DogOwner Kevin = context.getBean(DogOwner.class);
-        System.out.println(Kevin.getName());
-        System.out.println(Kevin.getDog().getName());
-        System.out.println(Kevin.getParrot().getName());
+//        System.out.println(Kevin.getName());
+//        System.out.println(Kevin.getDog().getName());
+//        System.out.println(Kevin.getParrot().getName());
 
+        Person mutantPerson = context.getBean(MutantPerson.class);
+        System.out.println(mutantPerson.getName());
+        System.out.println(mutantPerson.getPet().getName());
     }
 }
