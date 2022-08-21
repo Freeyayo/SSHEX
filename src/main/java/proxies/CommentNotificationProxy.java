@@ -2,6 +2,6 @@ package proxies;
 
 import model.Comment;
 
-public interface CommentService {
+public interface CommentNotificationProxy {
     void sendComment(Comment comment);
 }
